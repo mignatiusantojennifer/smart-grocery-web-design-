@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Grocery Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <button class="clear-all-btn" onclick="clearAll()" title="Clear all data">🗑️</button>
+    <h1>🛒 Smart Grocery Planner</h1>
+    <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+
+    <div class="form">
+      <input type="text" id="itemName" placeholder="Item name" />
+      <input type="number" id="quantity" placeholder="Qty" />
+      <input type="hidden" id="purchase" />
+      <input type="hidden" id="expiry" />
+      <select id="category">
+        <option>Fruits</option>
+        <option>Vegetables</option>
+        <option>Leafy Vegetable</option>
+        <option>Dairy</option>
+        <option>Snacks</option>
+        <option>Spreads</option>
+        <option>Bakery Item</option>
+      </select>
+      <button onclick="addItem()">➕ Add</button>
+    </div>
+
+    <h2>📦 Your List</h2>
+    <div id="groceryList"></div>
+
+    <h2>📉 Wasted Items: <span id="wasteCount">0</span></h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
